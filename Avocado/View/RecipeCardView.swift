@@ -25,14 +25,17 @@ struct RecipeCardView: View {
                 .scaledToFit()
                 .overlay(
                     HStack {
-                        
                         Spacer()
-                        
                         VStack {
                             Image(systemName: "bookmark")
                                 .font(Font.title.weight(.light))
-                                .foregroundColor(.white)
+                                .foregroundColor(Color("ColorGreenMedium"))
                                 .imageScale(.small)
+                                .background(
+                                        Circle()
+                                            .fill(Color.white)
+                                            .frame(width: 36, height: 36)
+                                    )
                                 .shadow(
                                     color:Color("ColorBlackTransparentLight"),
                                         radius: 2,
@@ -40,34 +43,32 @@ struct RecipeCardView: View {
                                 y: 0)
                                 .padding(.trailing, 20)
                                 .padding(.top, 22)
-                            
                             Spacer()
                         }
                     }
                 )
-            VStack(alignment: .leading, spacing: 12) {
-//                title
+            VStack(alignment: .leading) {
                 Text(recipe.title)
-                    .font(.system(.title, design: .serif))
+                    .font(.system(.title, design: .rounded))
                     .fontWeight(.bold)
                     .foregroundColor(Color("ColorGreenMedium"))
                     .lineLimit(1)
-//                headline
+                    .padding(.bottom, 1)
+                    .accessibilityIdentifier("recipeTitle")
                 
                 Text(recipe.headline)
-                    .font(.system(.body, design: .serif))
+                    .font(.system(.headline, design: .default))
                     .foregroundColor(.gray)
-                    .italic()
+                    .padding(.bottom, 8)
                 
-//                rates
                 RecipeRatingView(recipe: recipe)
-                
-//                cooking
-               RecipeCookingView(recipe: recipe)
+                    .padding(.bottom, 8)
+                Divider()
+                RecipeCookingView(recipe: recipe)
+                    .frame(maxWidth: .infinity, alignment: .center)
+                    .padding(.top, 8)
             }
             .padding()
-            .padding(.bottom, 12)
-            
         }
         .background(Color.white)
         .cornerRadius(12)

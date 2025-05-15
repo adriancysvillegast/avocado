@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct RecipesView: View {
     // MARK: - Properties
     
     var headers: [Header] = headerData
@@ -40,7 +40,7 @@ struct ContentView: View {
                     .fontWeight(.bold)
                     .modifier(TitleModifier())
             
-                ScrollView(.horizontal, showsIndicators: false) {
+                ScrollView(.horizontal, showsIndicators: true) {
                     HStack(alignment: .top, spacing: 60) {
                         ForEach(facts) { fact in
                             FactsView(fact: fact)
@@ -50,6 +50,7 @@ struct ContentView: View {
                     .padding(.leading, 60)
                     .padding(.trailing, 20)
                 }
+               
                 
                 // MARK: - Recipe Cards
                 
@@ -71,7 +72,7 @@ struct ContentView: View {
                         .fontWeight(.bold)
                         .modifier(TitleModifier())
                     
-                    Text("Everithing you wanted to know about avocados but were too afraid to ask")
+                    Text("Everything you wanted to know about avocados but were too afraid to ask")
                         .font(.system(.body, design: .serif))
                         .multilineTextAlignment(.center)
                         .foregroundColor(Color.gray)
@@ -79,11 +80,10 @@ struct ContentView: View {
                 }
                 .frame(maxWidth: 640)
                 .padding()
-                .padding(.bottom, 85)
-                        
+                .padding(.bottom, 85)  
             }
-            
         }
+        .background(Color.white.ignoresSafeArea())
         .edgesIgnoringSafeArea(.all)
         .padding(0)
     }
@@ -100,6 +100,6 @@ struct TitleModifier: ViewModifier {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(headers: headerData, facts: factData, recipes: recipesData)
+        RecipesView(headers: headerData, facts: factData, recipes: recipesData)
     }
 }

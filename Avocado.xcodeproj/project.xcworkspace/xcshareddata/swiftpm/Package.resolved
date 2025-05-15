@@ -1,0 +1,51 @@
+{
+  "originHash" : "ca049a8fae9e517c5fa3425bc6f78a442418fa7a3b919b29b816b9546e623662",
+  "pins" : [
+    {
+      "identity" : "keychainaccess",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kishikawakatsumi/KeychainAccess",
+      "state" : {
+        "revision" : "84e546727d66f1adc5439debad16270d0fdd04e7",
+        "version" : "4.2.2"
+      }
+    },
+    {
+      "identity" : "sbtuitesttunnel",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Subito-it/SBTUITestTunnel.git",
+      "state" : {
+        "branch" : "master",
+        "revision" : "b16e53a7c958414e6751b8ea835c8b2d015246f7"
+      }
+    },
+    {
+      "identity" : "supabase-swift",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/supabase/supabase-swift.git",
+      "state" : {
+        "revision" : "6d4ac07cbd1b28558453269fbd99e90e1694861a",
+        "version" : "2.9.0"
+      }
+    },
+    {
+      "identity" : "swift-concurrency-extras",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/pointfreeco/swift-concurrency-extras",
+      "state" : {
+        "revision" : "bb5059bde9022d69ac516803f4f227d8ac967f71",
+        "version" : "1.1.0"
+      }
+    },
+    {
+      "identity" : "swift-crypto",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/apple/swift-crypto.git",
+      "state" : {
+        "revision" : "bc1c29221f6dfeb0ebbfbc98eb95cd3d4967868e",
+        "version" : "3.4.0"
+      }
+    }
+  ],
+  "version" : 3
+}
