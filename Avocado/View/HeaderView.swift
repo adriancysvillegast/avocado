@@ -38,7 +38,6 @@ struct HeaderView: View {
                         .foregroundColor(Color.white)
                         .shadow(radius: 2)
                     
-                    
                     Text(header.subHeadline)
                         .font(.footnote)
                         .lineLimit(2)
@@ -54,7 +53,7 @@ struct HeaderView: View {
             }
             .frame(width: 285, height: 105, alignment: .center)
             .offset(x: -66, y: showHeadline ? 75 : 220)
-            .animation(slideInAnimation)
+            .transition(.slide)
             .onAppear {
                 self.showHeadline.toggle()
             }
